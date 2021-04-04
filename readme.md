@@ -4,7 +4,6 @@
 ### `Day1: Drum Kit`
 * Use querySelector with data-attribute. <br>
 `document.querySelector('audio[data-set=key]')`
-
 * Use `transitionend` event to manipulate elements when CSS animation ended
 * Use `keydown` event and `keypress` now is deprecated
 * No matter `bubbling` or `capturing`, `event.target` always refers to current element instead of element that you added listeners to
