@@ -1,5 +1,17 @@
 ﻿![](https://javascript30.com/images/JS3-social-share.png)
 
+# `Barney's Notes`
+### `Day1: Drum Kit`
+* Use querySelector with data-attribute. <br>
+`document.querySelector('audio[data-set=key]')`
+
+* Use `transitionend` event to manipulate elements when CSS animation ended
+* Use `keydown` event and `keypress` now is deprecated
+* No matter `bubbling` or `capturing`, `event.target` always refers to current element instead of element that you added listeners to
+* Also, I found a pretty interesting question about how to add `click` event handlers to a bunch of `<li>`. Utilize `bubbling` is the way
+* Cases like using `closure` functions as event handlers. 
+
+
 # JavaScript30
 
 Starter Files + Completed solutions for the JavaScript 30 Day Challenge.
@@ -65,11 +77,3 @@ Here are some links of people who have done the tutorials, but in a different la
 * [Will Wager](https://github.com/wwags33/JavaScript30) another [TypeScript](https://www.typescriptlang.org/) implementation!
 * [marcoSven](https://github.com/marcoSven) solution suggestion for [10 - Hold Shift and Check Checkboxes](https://github.com/marcoSven/JavaScript30/blob/master/10%20-%20Hold%20Shift%20and%20Check%20Checkboxes/index-FINISHED.html)
 * [ALMaclaine](https://github.com/almaclaine) Javascript 30 written in [Dart 2.0](https://github.com/ALMaclaine/Dart30).
-
-## A note on Pull Requests
-
-These are meant to be 1:1 copies of what is done in the video. If you found a better / different way to do things, great, but I will be keeping them the same as the videos.
-
-The starter files + solutions will be updated if/when the videos are updated.
-
-Thanks!
