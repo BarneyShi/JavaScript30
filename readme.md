@@ -1,6 +1,6 @@
 ﻿![](https://javascript30.com/images/JS3-social-share.png)
 
-# `Barney's Notes`
+# Barney's Notes
 ### `Day1: Drum Kit`
 * Use querySelector with data-attribute. <br>
 `document.querySelector('audio[data-set=key]')`
@@ -9,6 +9,10 @@
 * No matter `bubbling` or `capturing`, `event.target` always refers to current element instead of element that you added listeners to
 * Also, I found a pretty interesting question about how to add `click` event handlers to a bunch of `<li>`. Utilize `bubbling` is the way
 * Cases like using `closure` functions as event handlers. 
+
+### `Day2: Clock`
+* Use `setInterval` to make an infinite loop
+* Use `Date()` object and `getHours`, `getMinute`, `getSeconds` functions.
 
 
 # JavaScript30
