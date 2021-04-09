@@ -14,7 +14,29 @@
 * Use `setInterval` to make an infinite loop
 * Use `Date()` object and `getHours`, `getMinute`, `getSeconds` functions.
 
+### `Day3: CSS3 Variables`
+* Use pseudo element `:root` to represent <html> element. Then define CSS variables like 
+```
+:root {
+  --spacing: 2px 
+}
+```
+Then you can use varirables like 
+```
+img {
+  padding: var(--spacing);
+}
+```
+* The different between `inline JS` and `addEventListener`. Use `parentheses` for inline JS because it represents a function and use only `name` for addEventListener.
+```
+// Inline JS
+<input onchange="onChangehandler(event)">
 
+// Event listener
+document.querySelect('input')
+.addEventListener("click", onChangehandler);
+```
+* Use `filter: blur(value)` to add a blurry filter to element.
 # JavaScript30
 
 Starter Files + Completed solutions for the JavaScript 30 Day Challenge.
