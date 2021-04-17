@@ -8,27 +8,31 @@
 * Use `keydown` event and `keypress` now is deprecated
 * No matter `bubbling` or `capturing`, `event.target` always refers to current element instead of element that you added listeners to
 * Also, I found a pretty interesting question about how to add `click` event handlers to a bunch of `<li>`. Utilize `bubbling` is the way
-* Cases like using `closure` functions as event handlers. 
+* Cases like using `closure` functions as event handlers.
+<br />
+<br />
 
 ### `Day2: Clock`
 * Use `setInterval` to make an infinite loop
 * Use `Date()` object and `getHours`, `getMinute`, `getSeconds` functions.
+<br />
+<br />
 
 ### `Day3: CSS3 Variables`
 * Use pseudo element `:root` to represent <html> element. Then define CSS variables like 
-```
+```css
 :root {
   --spacing: 2px 
 }
 ```
 Then you can use varirables like 
-```
+```css
 img {
   padding: var(--spacing);
 }
 ```
 * The different between `inline JS` and `addEventListener`. Use `parentheses` for inline JS because it represents a function and use only `name` for addEventListener.
-```
+```javascript
 // Inline JS
 <input onchange="onChangehandler(event)">
 
@@ -37,6 +41,28 @@ document.querySelect('input')
 .addEventListener("click", onChangehandler);
 ```
 * Use `filter: blur(value)` to add a blurry filter to element.
+<br />
+<br />
+
+### `Day4: Array Cardio`
+* Use `Object.assign(target, source)` to shallow clone an array/object.
+* Use `reduce` to do kinda complex operations. 
+```javascript
+arr.reduce((acc, cur, index, array)=> {
+  // do some operations here, but remember to return acc every time.
+}, initialValue)
+```
+* Use `str1.localeCompare(str2)` to compare strings alphabetically.
+* Use `sort()`
+```javascript
+arr.sort((a,b)=>{
+  // Ascending order
+  return a - b;
+})
+```
+<br />
+<br />
+
 # JavaScript30
 
 Starter Files + Completed solutions for the JavaScript 30 Day Challenge.
