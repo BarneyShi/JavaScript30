@@ -60,6 +60,7 @@ arr.sort((a,b)=>{
   return a - b;
 })
 ```
+* Use `console.table`
 <br />
 <br />
 
