@@ -64,6 +64,12 @@ arr.sort((a,b)=>{
 <br />
 <br />
 
+### `Day6: Type Ahead`
+* Use XHR to open URL and event handlers like `onload`.
+* Use `RegEx` to replace matched strings. Basic flags like `gi` means globally case insensitive.
+* Use `toLocaleString('en-US')` to add thousand seperators to numbers.
+
+
 # JavaScript30
 
 Starter Files + Completed solutions for the JavaScript 30 Day Challenge.

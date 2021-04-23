@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Type Ahead 👀</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form class="search-form">
+      <input
+        type="text"
+        class="search"
+        placeholder="City or State"
+        oninput="onInputChange(event)"
+      />
+      <ul class="suggestions">
+        <li>Filter for a city</li>
+        <li>or a state</li>
+      </ul>
+    </form>
+    <script>
+      const endpoint =
+        "https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json";
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", endpoint, true);
+      xhr.send();
+      let cities;
+      xhr.onload = () => {
+        if (xhr.status === 200) {
+          cities = JSON.parse(xhr.response);
+        } else {
+          console.log("Error");
+        }
+      };
+      xhr.onerror = (err) => {
+        throw new Error(err);
+      };
+
+      const onInputChange = (event) => {
+        const res = cities.filter((city) => {
+          const input = event.target.value.toLowerCase();
+          const cityName = city.city.toLowerCase();
+          const cityState = city.state.toLowerCase();
+          return cityName.includes(input) || cityState.includes(input);
+        });
+        const ul = document.querySelector("ul");
+        ul.innerHTML = "";
+        if (res.length !== 0) {
+          res.forEach((e) => {
+            const element = document.createElement("li");
+
+            const text = `${e.city}, ${e.state}`;
+
+            // Learn to use this.value
+            const nameSpan = hightText(text, event.target.value);
+            element.appendChild(nameSpan);
+
+            const countSpan = document.createElement("span");
+            countSpan.innerText = parseInt(e.population).toLocaleString(
+              "en-US"
+            );
+            element.appendChild(countSpan);
+            ul.appendChild(element);
+          });
+        }
+      };
+
+      // Return highlighted name spans
+      const hightText = (text, target) => {
+        let res;
+        const regex = new RegExp(target, "ig");
+        res = text.replace(
+          regex,
+          `<span class="highlight">${target}</span>`
+        );
+        const span = document.createElement("span");
+        span.innerHTML = res;
+        return span;
+      };
+    </script>
+  </body>
+</html>
