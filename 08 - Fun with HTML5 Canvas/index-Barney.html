@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML5 Canvas</title>
+  </head>
+  <body>
+    <canvas id="draw" width="1024" height="800"></canvas>
+    <script></script>
+
+    <style>
+      html,
+      body {
+        margin: 0;
+      }
+      /* canvas {
+        height: 100%;
+        width: 100%;
+      } */
+    </style>
+  </body>
+
+  <script>
+    const canvas = document.getElementsByTagName("canvas")[0];
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+    const ctx = canvas.getContext("2d");
+    let canDraw;
+    let hue = 0;
+
+    // Saving the last coordinates is the key to draw a continuous stroke.
+    let lastX = 0;
+    let lastY = 0;
+    let lineWidth = 10;
+    let isWidthTooLong = false;
+    ctx.lineWidth = 15;
+
+    const draw = (event) => {
+      if (!canDraw) return;
+      ctx.beginPath();
+
+      ctx.lineCap = "round";
+      ctx.moveTo(lastX, lastY);
+
+      const color = `hsl(${hue}, 100%, 50%)`;
+      ctx.strokeStyle = color;
+      ctx.lineTo(event.clientX, event.clientY);
+      ctx.stroke();
+      lastX = event.clientX;
+      lastY = event.clientY;
+
+      hue++;
+      if (hue >= 360) {
+        hue = 0;
+      }
+      if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
+        isWidthTooLong = !isWidthTooLong;
+      }
+
+      if (!isWidthTooLong) {
+        ctx.lineWidth++;
+      } else {
+        ctx.lineWidth--;
+      }
+    };
+
+    const mouseDown = (event) => {
+      canDraw = true;
+      lastX = event.clientX;
+      lastY = event.clientY;
+      draw(event);
+    };
+
+    const mouseUp = () => {
+      canDraw = false;
+    };
+
+    canvas.addEventListener("mousedown", mouseDown);
+    canvas.addEventListener("mouseup", mouseUp);
+    canvas.addEventListener("mouseout", mouseUp);
+    canvas.addEventListener("mousemove", draw);
+  </script>
+</html>

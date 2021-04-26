@@ -70,6 +70,15 @@ arr.sort((a,b)=>{
 * Use `toLocaleString('en-US')` to add thousand seperators to numbers.
 
 
+### `Day8: HTML Canvas`
+* Use `getContext('2d')` to set up a 2D drawing context.
+* Use `beginPath()` to empty all sub-paths in list.
+* Use `moveTo()` before `lineTo()` to draw continuous lines.
+* Use `stroke()` to render strokes of current strokes.
+* Use `hsl(hue, 100%, 50%)` to gradually change colors as mouse moving.
+* Use `mousedown`, `mouseup`, `mousemove`, `mouseout` events.
+* Use `window.innerWidth` and `window.innerHeight` to set up canvas size.
+
 # JavaScript30
 
 Starter Files + Completed solutions for the JavaScript 30 Day Challenge.
