@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Console Tricks!</title>
+  </head>
+  <body>
+    <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+    <script>
+      const dogs = [
+        { name: "Snickers", age: 2 },
+        { name: "hugo", age: 8 },
+      ];
+
+      function makeGreen() {
+        const p = document.querySelector("p");
+        p.style.color = "#BADA55";
+        p.style.fontSize = "50px";
+      }
+
+      // Regular
+      console.log("Hello World");
+      // Interpolated
+      console.log("Hello World", "🎉");
+      // Styled
+      console.log(
+        "%cHello World",
+        "color:green; font-size:20px; font-weight:bold"
+      );
+      // warning!
+      console.warn("Cannot Hello World");
+      // Error :|
+      console.error("Not a real Error");
+      // Info
+      console.info("This is an info");
+      // Testing
+      const p = document.querySelector("p");
+      console.assert(p.classList.contains("ok"), "No class name 'ok' found");
+      // clearing
+      console.clear();
+      // Viewing DOM Elements
+      console.dir(p);
+      console.log(p);
+      // Grouping together
+      dogs.forEach((dog) => {
+        console.groupCollapsed(`${dog.name}`);
+        console.log("Age: ", dog.age);
+        console.groupEnd();
+      });
+      // counting
+      console.count("Hello");
+      console.count("World");
+      console.count("Hello");
+      console.count("Hello");
+      console.count("Hello");
+      console.count("World");
+      console.count("World");
+      // timing
+      console.time("Fetch data");
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://api.github.com/users/wesbos");
+      xhr.send();
+      xhr.onload = () => {
+        console.log(xhr.response);
+        console.timeEnd("Fetch data");
+      };
+
+      console.table(dogs);
+    </script>
+  </body>
+</html>

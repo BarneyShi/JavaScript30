@@ -68,7 +68,8 @@ arr.sort((a,b)=>{
 * Use XHR to open URL and event handlers like `onload`.
 * Use `RegEx` to replace matched strings. Basic flags like `gi` means globally case insensitive.
 * Use `toLocaleString('en-US')` to add thousand seperators to numbers.
-
+<br />
+<br />
 
 ### `Day8: HTML Canvas`
 * Use `getContext('2d')` to set up a 2D drawing context.
@@ -78,7 +79,17 @@ arr.sort((a,b)=>{
 * Use `hsl(hue, 100%, 50%)` to gradually change colors as mouse moving.
 * Use `mousedown`, `mouseup`, `mousemove`, `mouseout` events.
 * Use `window.innerWidth` and `window.innerHeight` to set up canvas size.
+<br />
+<br />
 
+### `Day9: Console Domination`
+* How to use `console.time("timerName")`, `console.timeEnd("timerName")`
+* How to use `console.count(var)`
+* How to use `console.asset(exp, resIfFalse)`
+* Use `console.dir` to render objects as key/value pairs.
+* How to use `console.groupCollapsed("column")` and `console.groupEnd()`
+<br />
+<br />
 # JavaScript30
 
 Starter Files + Completed solutions for the JavaScript 30 Day Challenge.
