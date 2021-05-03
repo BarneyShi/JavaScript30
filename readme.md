@@ -90,7 +90,6 @@ arr.sort((a,b)=>{
 * Use `lastChecked` to record the last checked checkbox. 
 * Check if `lastChecked` is defined in click handler.
 * Add an `index` property while adding event listeners.
-
 <br />
 # JavaScript30
 
