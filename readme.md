@@ -10,12 +10,10 @@
 * Also, I found a pretty interesting question about how to add `click` event handlers to a bunch of `<li>`. Utilize `bubbling` is the way
 * Cases like using `closure` functions as event handlers.
 <br />
-<br />
 
 ### `Day2: Clock`
 * Use `setInterval` to make an infinite loop
 * Use `Date()` object and `getHours`, `getMinute`, `getSeconds` functions.
-<br />
 <br />
 
 ### `Day3: CSS3 Variables`
@@ -42,7 +40,6 @@ document.querySelect('input')
 ```
 * Use `filter: blur(value)` to add a blurry filter to element.
 <br />
-<br />
 
 ### `Day4: Array Cardio`
 * Use `Object.assign(target, source)` to shallow clone an array/object.
@@ -61,7 +58,6 @@ arr.sort((a,b)=>{
 })
 ```
 * Use `console.table`
-<br />
 <br />
 
 ### `Day6: Type Ahead`
@@ -89,6 +85,12 @@ arr.sort((a,b)=>{
 * Use `console.dir` to render objects as key/value pairs.
 * How to use `console.groupCollapsed("column")` and `console.groupEnd()`
 <br />
+
+### `Day10: Shift && Checkbox`
+* Use `lastChecked` to record the last checked checkbox. 
+* Check if `lastChecked` is defined in click handler.
+* Add an `index` property while adding event listeners.
+
 <br />
 # JavaScript30
 
