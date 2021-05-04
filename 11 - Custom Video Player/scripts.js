@@ -18,17 +18,23 @@ const setProgressBar = () => {
 setInterval(setProgressBar, 500);
 
 const forward = () => {
-    video.currentTime = video.currentTime + 25;
-}
+  video.currentTime = video.currentTime + 25;
+};
 
 const backward = () => {
-    video.currentTime = video.currentTime - 10;
-}
+  video.currentTime = video.currentTime - 10;
+};
 
-const changePlayRate = event => {
-    video.playbackRate = parseFloat(event.target.value);
-}
+const changePlayRate = (event) => {
+  video.playbackRate = parseFloat(event.target.value);
+};
 
-const changeVolume = event => {
-    video.volume = parseFloat(event.target.value);
-}
+const changeVolume = (event) => {
+  video.volume = parseFloat(event.target.value);
+};
+
+const jump = (event) => {
+  const progressBar = document.querySelector('.progress');
+  const time = event.offsetX / progressBar.offsetWidth * video.duration;
+  video.currentTime = time;
+};

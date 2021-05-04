@@ -91,6 +91,13 @@ arr.sort((a,b)=>{
 * Check if `lastChecked` is defined in click handler.
 * Add an `index` property while adding event listeners.
 <br />
+
+### `Day11: HTML video tag`
+* Use `event.offsetX` to get the width relative to target element.
+* Use `<video>` tag properties such as `currentTime`, `playbackRate`, `volume`.
+* Use `play` and `pause` function. 
+* Use CSS property `flex-basis` to define width of a flex item.
+<br />
 # JavaScript30
 
 Starter Files + Completed solutions for the JavaScript 30 Day Challenge.
