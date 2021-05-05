@@ -98,6 +98,11 @@ arr.sort((a,b)=>{
 * Use `play` and `pause` function. 
 * Use CSS property `flex-basis` to define width of a flex item.
 <br />
+
+### `Day12: Key sequence detection`
+* Use `negative` index on `splice(start, X)` to remove X element from arrays starting from the end.
+* Use `join('')` to join elements from an array into a string.
+<br />
 # JavaScript30
 
 Starter Files + Completed solutions for the JavaScript 30 Day Challenge.
