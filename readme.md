@@ -9,12 +9,10 @@
 * No matter `bubbling` or `capturing`, `event.target` always refers to current element instead of element that you added listeners to
 * Also, I found a pretty interesting question about how to add `click` event handlers to a bunch of `<li>`. Utilize `bubbling` is the way
 * Cases like using `closure` functions as event handlers.
-<br />
 
 ### `Day2: Clock`
 * Use `setInterval` to make an infinite loop
 * Use `Date()` object and `getHours`, `getMinute`, `getSeconds` functions.
-<br />
 
 ### `Day3: CSS3 Variables`
 * Use pseudo element `:root` to represent <html> element. Then define CSS variables like 
@@ -39,7 +37,6 @@ document.querySelect('input')
 .addEventListener("click", onChangehandler);
 ```
 * Use `filter: blur(value)` to add a blurry filter to element.
-<br />
 
 ### `Day4: Array Cardio`
 * Use `Object.assign(target, source)` to shallow clone an array/object.
@@ -58,14 +55,12 @@ arr.sort((a,b)=>{
 })
 ```
 * Use `console.table`
-<br />
 
 ### `Day6: Type Ahead`
 * Use XHR to open URL and event handlers like `onload`.
 * Use `RegEx` to replace matched strings. Basic flags like `gi` means globally case insensitive.
 * Use `toLocaleString('en-US')` to add thousand seperators to numbers.
-<br />
-<br />
+
 
 ### `Day8: HTML Canvas`
 * Use `getContext('2d')` to set up a 2D drawing context.
@@ -75,8 +70,7 @@ arr.sort((a,b)=>{
 * Use `hsl(hue, 100%, 50%)` to gradually change colors as mouse moving.
 * Use `mousedown`, `mouseup`, `mousemove`, `mouseout` events.
 * Use `window.innerWidth` and `window.innerHeight` to set up canvas size.
-<br />
-<br />
+
 
 ### `Day9: Console Domination`
 * How to use `console.time("timerName")`, `console.timeEnd("timerName")`
@@ -84,25 +78,27 @@ arr.sort((a,b)=>{
 * How to use `console.asset(exp, resIfFalse)`
 * Use `console.dir` to render objects as key/value pairs.
 * How to use `console.groupCollapsed("column")` and `console.groupEnd()`
-<br />
 
 ### `Day10: Shift && Checkbox`
 * Use `lastChecked` to record the last checked checkbox. 
 * Check if `lastChecked` is defined in click handler.
 * Add an `index` property while adding event listeners.
-<br />
 
 ### `Day11: HTML video tag`
 * Use `event.offsetX` to get the width relative to target element.
 * Use `<video>` tag properties such as `currentTime`, `playbackRate`, `volume`.
 * Use `play` and `pause` function. 
 * Use CSS property `flex-basis` to define width of a flex item.
-<br />
 
 ### `Day12: Key sequence detection`
 * Use `negative` index on `splice(start, X)` to remove X element from arrays starting from the end.
 * Use `join('')` to join elements from an array into a string.
-<br />
+
+## `Day13: Slide in on Scroll`
+* Difference between `window.scrollY` vs `window.innerHeight`.
+* Use `element.offsetTop` to get position relative to the whole window.
+* Use `element.offsetHeight` to get the height of an element.
+* Use `debounce` to delay continuously calling a function in case of bad performace. 
 # JavaScript30
 
 Starter Files + Completed solutions for the JavaScript 30 Day Challenge.

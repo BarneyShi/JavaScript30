@@ -242,11 +242,15 @@
 
       function slideImgs() {
         for (let img of imgs) {
-          if (
+          const isHalfPastImg =
             window.scrollY + window.innerHeight >
-            img.offsetHeight / 2 + img.offsetTop
-          ) {
+            img.offsetHeight / 2 + img.offsetTop;
+          const isPastBottom =
+            window.scrollY > img.offsetTop + img.offsetHeight;
+          if (isHalfPastImg && !isPastBottom) {
             img.classList.add("active");
+          } else {
+            img.classList.remove("active");
           }
         }
       }
