@@ -1,4 +1,4 @@
-﻿![](https://javascript30.com/images/JS3-social-share.png)
+﻿![](/JS30.png)
 
 # Barney's Notes
 ### `Day1: Drum Kit`
