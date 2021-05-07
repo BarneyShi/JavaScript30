@@ -94,11 +94,19 @@ arr.sort((a,b)=>{
 * Use `negative` index on `splice(start, X)` to remove X element from arrays starting from the end.
 * Use `join('')` to join elements from an array into a string.
 
-## `Day13: Slide in on Scroll`
+### `Day13: Slide in on Scroll`
 * Difference between `window.scrollY` vs `window.innerHeight`.
 * Use `element.offsetTop` to get position relative to the whole window.
 * Use `element.offsetHeight` to get the height of an element.
 * Use `debounce` to delay continuously calling a function in case of bad performace. 
+
+### `Day14: Copy vs Referencing`
+* Use `let new = old` to reference;
+* Use `let new = Object.assign([]/{}, old)` to shallow copy.
+* Use `let new = old.slice()` to shallow copy.
+* Use `let new = [...old]` to shallow copy.
+* Use `let new = JSON.parse(JSON.stringify(old))` to shallow copy `serializable` objects. But if some properties are `function` are `non-serializable`, those properties will be lost after shallow copying.
+
 # JavaScript30
 
 Starter Files + Completed solutions for the JavaScript 30 Day Challenge.

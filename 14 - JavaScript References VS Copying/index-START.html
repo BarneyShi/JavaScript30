@@ -11,8 +11,10 @@
       // Let's say we have an array
       const players = ["Wes", "Sarah", "Ryan", "Poppy"];
       const refPlayers = players;
-      const copyPlayers = [...players];
-
+      const spreadCopy = [...players];
+      const assignCopy = Object.assign([], players);
+      const sliceCopy = players.slice();
+      const arrayFromCopy = Array.from(players);
       // and we want to make a copy of it.
 
       // You might think we can just do something like this:
@@ -43,13 +45,38 @@
         age: 80,
       };
 
+      // Use Object.assign and update properties
+      const updatedCopy = Object.assign({}, person, {
+        number: 100,
+        name: "Barney",
+      });
+      console.log("Updated Copy with Object.assign", updatedCopy);
+
       // and think we make a copy:
 
       // how do we take a copy instead?
 
       // We will hopefully soon see the object ...spread
 
-      // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
+      // Things to note - this is only 1 level deep - both for Arrays and Ob jects. lodash has a cloneDeep method, but you should think twice before using it.
+
+      const barney = {
+        name: "Barney",
+        age: 69,
+        social: {
+          twitter: "@Barney",
+          facebook: "Barney.developer",
+        },
+      };
+
+      const shallowCopy = Object.assign({}, barney);
+      shallowCopy.social.twitter = "Null";
+      console.log("barneys twitter after update", barney);
+      console.log("Test shallow copy", shallowCopy);
+      console.log(
+        "JSON parse & JSON stringify",
+        JSON.parse(JSON.stringify(barney))
+      );
     </script>
   </body>
 </html>
