@@ -107,6 +107,11 @@ arr.sort((a,b)=>{
 * Use `let new = [...old]` to shallow copy.
 * Use `let new = JSON.parse(JSON.stringify(old))` to shallow copy `serializable` objects. But if some properties are `function` are `non-serializable`, those properties will be lost after shallow copying.
 
+### `Day15: LocalStorage`
+* `localStorage` can only store key/string values. So you need to do `JSON.stringify(object)` before saving it.
+* Use `document.forms.forName.inputName` to get input values.
+* `label` tag's `for` attribute needs to be the same as `input` tag's `name`. 
+
 # JavaScript30
 
 Starter Files + Completed solutions for the JavaScript 30 Day Challenge.
