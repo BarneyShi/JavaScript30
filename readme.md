@@ -112,6 +112,15 @@ arr.sort((a,b)=>{
 * Use `document.forms.forName.inputName` to get input values.
 * `label` tag's `for` attribute needs to be the same as `input` tag's `name`. 
 
+### `Day16: Mouse Move Shadow`
+* Add `mousemove` to `div` instead of `window` coz they set `div` to `100vh` on purpose.
+* Know the differences between `offsetLeft` vs `offsetWidth`.
+* To scale `offsetX` and `offsetY` inside `div`. We need to use a factor to scale it down. 
+```javascrpt
+const xWalk = (left - width / 2) * factor;
+const yWalk = (top - height / 2) * factor;
+```
+* `(left - width / 2)` would be the position and multiply it by `factor` is how much it is relative to the half part of `div`.
 # JavaScript30
 
 Starter Files + Completed solutions for the JavaScript 30 Day Challenge.
