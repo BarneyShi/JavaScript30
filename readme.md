@@ -121,6 +121,10 @@ const xWalk = (left - width / 2) * factor;
 const yWalk = (top - height / 2) * factor;
 ```
 * `(left - width / 2)` would be the position and multiply it by `factor` is how much it is relative to the half part of `div`.
+
+### `Day17 : Sort without Articles`
+* Regex expression like `/^(a |the |an)/i` which means strings start with articles.
+* Use `sort`, return `-1` if you want to keep the order. 
 # JavaScript30
 
 Starter Files + Completed solutions for the JavaScript 30 Day Challenge.
