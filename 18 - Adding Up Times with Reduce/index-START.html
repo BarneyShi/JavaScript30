@@ -84,7 +84,7 @@
       const totalMili = timeArr.reduce(reducer, 0);
       const hour = Math.floor(totalMili / (60 * 1000 * 60));
       const min = Math.floor((totalMili / (60 * 1000)) % 60);
-      const sec = Math.floor((totalMili / 1000) % 60);
+      const sec =(totalMili / 1000) % 60;
       console.log(`The total duration is ${hour}:${min}:${sec}`);
     </script>
   </body>

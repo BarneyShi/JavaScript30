@@ -122,9 +122,25 @@ const yWalk = (top - height / 2) * factor;
 ```
 * `(left - width / 2)` would be the position and multiply it by `factor` is how much it is relative to the half part of `div`.
 
-### `Day17 : Sort without Articles`
+### `Day17: Sort without Articles`
 * Regex expression like `/^(a |the |an)/i` which means strings start with articles.
 * Use `sort`, return `-1` if you want to keep the order. 
+
+### `Day18: Adding up Times with Reduce`
+* How to use reducer. 
+```javascript
+const reducer = (acc, cur, index, arr) => {
+  // return a result for next iteration
+}
+```
+* `Milliseconds` to `second, min, hour`. 
+```javascript
+const sec = milli % 60;
+// Convert milliseconds to mins, it would be like 298.9666mins. Then by % 60, we get 
+// 58.9666 which means there are 58 mins, and the rest it just seconds.
+const min = Math.floor(milli / (60 * 1000) % 60);
+const hour = Math.floor(milli / (60 * 1000 * 60));
+```
 # JavaScript30
 
 Starter Files + Completed solutions for the JavaScript 30 Day Challenge.
