@@ -152,6 +152,11 @@ ctx.getImageData then ctx.putImageData
 * Know how to turn off webcam using `navigator.mediaDevices.getUserMedia`, but you have to run it on localhost.
 * Know there is an event called `canplay` on `video` element.
 
+
+### `Day21: Geolocation`
+* Use `navigator.geolocation.watchPosition` to constantly reaching current position. 
+* Use `navigator.geolocation.getCurrentPosition` to get the position once.
+
 # JavaScript30
 
 Starter Files + Completed solutions for the JavaScript 30 Day Challenge.
