@@ -157,6 +157,10 @@ ctx.getImageData then ctx.putImageData
 * Use `navigator.geolocation.watchPosition` to constantly reaching current position. 
 * Use `navigator.geolocation.getCurrentPosition` to get the position once.
 
+### `Day22: Follow along link highlighter`
+* `pageXOffset` is an alias for `scrollX`
+* `getBoudingClientRect` returns `width`, `height`, `left` and `top` relative to viewport, so we need to add `scrollX` and `left` together as the value of `span`'s `left` property.
+
 # JavaScript30
 
 Starter Files + Completed solutions for the JavaScript 30 Day Challenge.
